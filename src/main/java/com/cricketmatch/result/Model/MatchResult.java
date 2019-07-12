@@ -54,7 +54,7 @@ public class MatchResult {
 	private Integer wicketsPrev;
 	
 	@Column(name = "prev_overs")
-	private Integer prevOvers;
+	private Float prevOvers;
 	
 	@Column(name = "target")
 	private Integer target;
@@ -188,11 +188,11 @@ public class MatchResult {
 		this.wicketsPrev = wicketsPrev;
 	}
 
-	public Integer getPrevOvers() {
+	public Float getPrevOvers() {
 		return prevOvers;
 	}
 
-	public void setPrevOvers(Integer prevOvers) {
+	public void setPrevOvers(Float prevOvers) {
 		this.prevOvers = prevOvers;
 	}
 
@@ -231,6 +231,7 @@ public class MatchResult {
 	@Override
 	public String toString() {
 		String str = "Match{id:"+id+","
+				+"match_id:"+ matchId+","
 				+"Status:"+matchStatus+","
 				+"FirstInnings:"+firstInnings+","
 				+"SecondInnings:"+secondInnings+","
@@ -247,8 +248,7 @@ public class MatchResult {
 				+"Target:"+target+","
 				+"winner_team:"+winner+","
 				+"firstInningsBy:"+firstInningsBy+","
-				+"secondInningsBy:"+secondInningsBy+","
-				+"match_id:"+ matchId+","
+				+"secondInningsBy:"+secondInningsBy
 				+ "}";
 		return str;
 	}
